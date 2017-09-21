@@ -1,0 +1,11 @@
+decode-request:
+  path: /decode-request
+  defaults: { _controller: ZechimApiBundle:Test:decodeRequest }
+
+do-not-decode-request:
+  path: /do-not-decode-request
+  defaults: { _controller: ZechimApiBundle:Test:withoutDecodeRequest }
+
+require-authentication:
+  path: /authenticated/require-authentication
+  defaults: { _controller: ZechimApiBundle:Test:requireAuthentication }

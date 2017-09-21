@@ -1,0 +1,8 @@
+.idea/
+composer.lock
+vendor
+phpunit.xml
+!Tests/app/cache/.gitkeep
+Tests/app/cache/
+!Tests/app/logs/.gitkeep
+Tests/app/logs/

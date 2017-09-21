@@ -1,0 +1,26 @@
+{
+  "name": "zech86/ApiBundle",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Jonatas Zechim",
+      "email": "jonatas@zechim.com"
+    }
+  ],
+
+  "require": {
+    "symfony/security-guard": "3.3.*",
+    "doctrine/annotations":  "1.5.*",
+    "zech86/php-simple-encrypted-text": "dev-master"
+  },
+
+  "require-dev": {
+    "symfony/symfony": "3.3.*"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Zechim\\ApiBundle\\": ""
+    }
+  }
+}

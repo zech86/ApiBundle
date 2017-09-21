@@ -1,0 +1,33 @@
+framework:
+  secret: test
+  test: ~
+  router: { resource: "%kernel.root_dir%/routing.yml" }
+
+zechim_api:
+  builder:
+    encrypt_key: my-key
+
+security:
+  encoders:
+    Symfony\Component\Security\Core\User\User: plaintext
+
+  role_hierarchy:
+    ROLE_ADMIN:       ROLE_USER
+    ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+  providers:
+    in_memory:
+      memory:
+        users:
+          my_user_name: { password: mypassword, roles: [ 'ROLE_ADMIN' ] }
+
+  firewalls:
+    api:
+      pattern:  ^/authenticated
+      anonymous: ~
+      guard:
+        authenticators:
+          - zechim_api.token_authenticator
+
+  access_control:
+    - { path: ^/authenticated, roles: IS_AUTHENTICATED_FULLY }

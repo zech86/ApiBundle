@@ -1,0 +1,10 @@
+services:
+  zechim_api.event_listener.request_decoder:
+    class: Zechim\ApiBundle\EventListener\RequestDecoderListener
+    arguments: ["@annotation_reader", "@zechim_api.encrypt_decrypt"]
+    tags:
+      - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+  zechim_api.token_authenticator:
+    class: Zechim\ApiBundle\Security\TokenAuthenticator
+    arguments: ["@zechim_api.credential_fetcher"]
