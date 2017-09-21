@@ -8,7 +8,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require zech86/apibundle dev-master
+$ composer require zech86/api-bundle dev-master
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -69,7 +69,7 @@ zechim_api:
     # default
     encrypt_class: SimpleEncryptedText/OpenSSL
     # required
-    encrypt_key: your secret keylt
+    encrypt_key: your secret key
     # http://php.net/manual/pt_BR/function.openssl-get-cipher-methods.php
     # default
     encrypt_cipher: AES-256-CFB8
