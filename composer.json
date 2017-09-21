@@ -10,8 +10,7 @@
 
   "require": {
     "symfony/security-guard": "3.3.*",
-    "doctrine/annotations":  "1.5.*",
-    "zech86/php-simple-encrypted-text": "dev-master"
+    "zech86/php-simple-encrypted-text": "1.*"
   },
 
   "require-dev": {
